@@ -1,3 +1,6 @@
+package mycodes;
+
+import java.lang.reflect.Method;
 public class BankAcc {
 	private String accNo; ;
 	private double accBalance;
