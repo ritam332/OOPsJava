@@ -1,3 +1,5 @@
+package mycodes2;
+
 public class ClassBankAccount {
     private String number;
     private double balance;
@@ -18,8 +20,19 @@ public class ClassBankAccount {
         this.customerEmail = customerEmail;
         this.customerPhoneNum = customerPhoneNum;
     }
+    
+    
 
-    public void deposit(double depositAmount) {
+    public ClassBankAccount(String customerName, String customerEmail,
+			String customerPhoneNum) {
+		this("99999",100.55,customerName,customerEmail,customerPhoneNum);
+		
+		this.customerName = customerName;
+		this.customerEmail = customerEmail;
+		this.customerPhoneNum = customerPhoneNum;
+	}
+
+	public void deposit(double depositAmount) {
         this.balance += depositAmount;
         System.out.println("Deposit of " + depositAmount + " made. New balance is " + this.balance);
     }
@@ -85,7 +98,10 @@ public class ClassBankAccount {
         System.out.println(RitamsAcc.getCustomerPhoneNum());
         System.out.println(RitamsAcc.getCustomerEmail());
         System.out.println(RitamsAcc.getBalance());
+        ClassBankAccount timAcc= new ClassBankAccount("Tim","tim@gmail.com", "93309");
 
+        System.out.println(timAcc.getCustomerEmail());
+        
         RitamsAcc.setCustomerName("Tim");
         System.out.println(RitamsAcc.getCustomerName());
 
